@@ -1,0 +1,5 @@
+{
+  "name": "my-cicd-app",
+  "private": true,
+  "dependencies": {}
+}
