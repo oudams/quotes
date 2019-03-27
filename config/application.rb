@@ -1,10 +1,12 @@
 require_relative 'boot'
 
 require 'rails/all'
-
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+
+# Load Dotenv earlier
+Dotenv::Railtie.load
 
 module MyCicdApp
   class Application < Rails::Application
