@@ -3,5 +3,6 @@ class QuotesController < ApplicationController
   end
 
   def show
+    @quote = "Knowledge will give you power, but character respect."
   end
 end
