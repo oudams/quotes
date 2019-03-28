@@ -16,7 +16,7 @@ class Quote < ApplicationRecord
         conn = Faraday.new(:url => 'https://andruxnet-random-famous-quotes.p.rapidapi.com')
 
         resp = conn.get do |req|
-          req.url '/?count=5&cat=famous'
+          req.url '/?count=15&cat=famous'
           req.headers['Content-Type'] = 'application/json'
           req.headers['X-RapidAPI-Key'] = ENV["X_RapidAPI_Key"]
         end
@@ -29,11 +29,12 @@ class Quote < ApplicationRecord
     end
 
     def new_month
-      last_date = order(:created_at).last&.created_at
+      false
+      # last_date = order(:created_at).last&.created_at
 
-      return true unless last_date
+      # return true unless last_date
 
-      (Date.today - last_date.to_date) > 30
+      # (Date.today - last_date.to_date) > 30
     end
   end
 end
