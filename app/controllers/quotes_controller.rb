@@ -4,6 +4,7 @@ class QuotesController < ApplicationController
 
   def show
     @quote = random_quote.content
+    @quote_owner = random_quote.owner
   end
 
   private
