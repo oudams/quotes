@@ -3,6 +3,13 @@ class QuotesController < ApplicationController
   end
 
   def show
-    @quote = "Knowledge will give you power, but character respect."
+    @quote = random_quote.content
+  end
+
+  private
+
+  def random_quote
+    offset = rand(Quote.count)
+    quote = Quote.offset(offset).first
   end
 end
