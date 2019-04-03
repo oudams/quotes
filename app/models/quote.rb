@@ -29,12 +29,12 @@ class Quote < ApplicationRecord
     end
 
     def new_month
-      false
-      # last_date = order(:created_at).last&.created_at
+      # false
+      last_date = order(:created_at).last&.created_at
 
-      # return true unless last_date
+      return true unless last_date
 
-      # (Date.today - last_date.to_date) > 30
+      (Date.today - last_date.to_date) > 30
     end
   end
 end
