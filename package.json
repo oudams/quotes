@@ -1,5 +1,5 @@
 {
-  "name": "my-cicd-app",
+  "name": "quotes",
   "private": true,
   "dependencies": {}
 }
