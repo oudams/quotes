@@ -9,10 +9,10 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .title
-      .stage
-        = ENV["APP_STAGE"]
-        = "(#{@total})"
       .logo
         = image_tag("logo.png", alt: "logo")
     .content
       = yield
+    .footer
+      %p
+        = "Power by #{ ENV["APP_STAGE"] } with #{@total} records. "
